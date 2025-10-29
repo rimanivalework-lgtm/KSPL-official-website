@@ -1,0 +1,384 @@
+/* Component-specific CSS classes */
+
+/* Custom scrollbar styles */
+.testimonial-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.testimonial-scroll::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 3px;
+}
+
+.testimonial-scroll::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+
+.testimonial-scroll::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Hide scrollbar arrows */
+.testimonial-scroll::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Icon styles */
+.icon-primary {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(8%) saturate(1234%) hue-rotate(201deg) brightness(95%) contrast(89%);
+}
+
+.icon-white {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.icon-muted {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(8%) saturate(1234%) hue-rotate(201deg) brightness(95%) contrast(89%);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #204CC7;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #006394;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid #006394;
+  color: #006394;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #006394;
+  color: white;
+}
+
+/* Enhanced button hover styles for better visibility */
+button[data-variant="outlinePrimary"]:hover,
+button[data-variant="outline"]:hover,
+a[data-variant="outlinePrimary"]:hover,
+a[data-variant="outline"]:hover {
+  color: white !important;
+}
+
+/* Specific styles for outlinePrimary variant */
+.outlinePrimary:hover,
+button.outlinePrimary:hover,
+a.outlinePrimary:hover {
+  background-color: #195C9A !important;
+  color: white !important;
+}
+
+/* Specific styles for outline variant */
+.outline:hover,
+button.outline:hover,
+a.outline:hover {
+  background-color: #195C9A !important;
+  color: white !important;
+}
+
+/* Force white text on hover for outline buttons only (not navigation dropdowns) */
+button[data-variant="outlinePrimary"]:hover,
+button[data-variant="outline"]:hover,
+a[data-variant="outlinePrimary"]:hover,
+a[data-variant="outline"]:hover,
+button[class*="hover:text-white"]:hover,
+a[class*="hover:text-white"]:hover {
+  color: white !important;
+}
+
+/* Additional specificity for button components (exclude navigation) */
+[data-radix-slot] button:hover:not([class*="nav"]):not([class*="dropdown"]),
+[data-radix-slot] a:hover:not([class*="nav"]):not([class*="dropdown"]) {
+  color: white !important;
+}
+
+/* Enhanced button variants */
+.btn-hero-white {
+  background-color: #FFFFFF;
+  color: #204CC7;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-white:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.btn-cta {
+  background: linear-gradient(135deg, #204CC7, #13293D);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: linear-gradient(135deg, #13293D, #204CC7);
+  transform: scale(1.05);
+}
+
+.btn-outline-primary {
+  border: 2px solid #204CC7;
+  color: #204CC7;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #204CC7;
+  color: white;
+}
+
+.btn-outline-white {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Card styles */
+.card-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-consistent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animation styles */
+.icon-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #204CC7 0%, #006394 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #13293D 0%, #204CC7 100%);
+}
+
+/* Card tint variations */
+.card-blue-tint {
+  background: linear-gradient(135deg, rgba(32, 76, 199, 0.05) 0%, rgba(0, 99, 148, 0.05) 100%);
+}
+
+.card-green-tint {
+  background: linear-gradient(135deg, rgba(88, 201, 149, 0.05) 0%, rgba(74, 222, 128, 0.05) 100%);
+}
+
+.card-cyan-tint {
+  background: linear-gradient(135deg, rgba(0, 200, 247, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+}
+
+.card-yellow-tint {
+  background: linear-gradient(135deg, rgba(255, 145, 0, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+}
+
+/* Shadow utilities */
+.shadow-soft {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-large {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Typography utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #204CC7 0%, #006394 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-center {
+    text-align: center;
+  }
+  
+  .mobile-full {
+    width: 100%;
+  }
+}
+
+/* Navigation hover colors - ensure primary color is used */
+.hover\:text-primary:hover {
+  color: #195C9A !important;
+}
+
+.text-primary {
+  color: #195C9A !important;
+}
+
+/* More specific selectors for navigation elements */
+nav .hover\:text-primary:hover,
+nav a:hover,
+nav button:hover {
+  color: #195C9A !important;
+}
+
+/* Dropdown trigger specific styling */
+[data-radix-collection-item] .hover\:text-primary:hover,
+[data-radix-collection-item]:hover {
+  color: #195C9A !important;
+}
+
+/* Ensure all primary text uses the correct color */
+.text-primary,
+.hover\:text-primary:hover,
+.text-primary:hover {
+  color: #195C9A !important;
+}
+
+/* Radix UI Dropdown specific overrides */
+[data-radix-popper-content-wrapper] button:hover,
+[data-radix-popper-content-wrapper] button[data-state="open"],
+[data-radix-popper-content-wrapper] button[data-state="open"]:hover {
+  color: #195C9A !important;
+}
+
+/* Navigation dropdown triggers */
+header nav button:hover,
+header nav button[data-state="open"],
+header nav button[data-state="open"]:hover {
+  color: #195C9A !important;
+}
+
+/* Force primary color for all navigation elements */
+header .text-primary,
+header .hover\:text-primary:hover,
+header nav .text-primary,
+header nav .hover\:text-primary:hover {
+  color: #195C9A !important;
+}
+
+/* Custom navigation hover class */
+.nav-hover-primary:hover {
+  color: #195C9A !important;
+}
+
+/* Override any conflicting styles with maximum specificity */
+header nav button.nav-hover-primary:hover,
+header nav button[data-state="open"].nav-hover-primary,
+header nav button[data-state="open"].nav-hover-primary:hover {
+  color: #195C9A !important;
+}
+
+/* Ensure navigation dropdown content uses primary color, not white */
+header nav [data-radix-popper-content-wrapper] a:hover,
+header nav [data-radix-popper-content-wrapper] li:hover,
+header nav [data-radix-popper-content-wrapper] .hover\:text-primary:hover {
+  color: #195C9A !important;
+}
+
+/* Override any white text rules for navigation dropdowns */
+header nav [data-radix-popper-content-wrapper] *:hover {
+  color: #195C9A !important;
+}
+
+/* Specific override for dropdown menu items in navigation */
+header nav [data-radix-dropdown-menu-content] a:hover,
+header nav [data-radix-dropdown-menu-content] li:hover,
+header nav [data-radix-dropdown-menu-content] .hover\:text-primary:hover {
+  color: #195C9A !important;
+}
+
+/* Focus states for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #195C9A;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #195C9A;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* react-phone-input-2 overrides - remove white background from flag */
+.react-tel-input .flag-dropdown,
+.react-tel-input .selected-flag {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background: transparent !important;
+}
